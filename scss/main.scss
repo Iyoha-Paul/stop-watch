@@ -1,9 +1,68 @@
 @import "config";
 
-body {
-  background-color: $primary-color;
-  color: set-test-color($primary-color);
-  height: 100vh;
+.main {
+  &.dark-theme {
+    background-color: $primary-color;
+    color: set-test-color($primary-color);
+  }
+
   font-family: "roboto", sans-serif;
   line-height: 1;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stopwatch {
+  position: relative;
+  margin: auto;
+  padding: 5rem 15rem;
+  &.dark-theme {
+    background-color: $secondary-color;
+  }
+  background-color: set-test-color($primary-color);
+  border: 1px solid $primary-color;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  &__timer {
+    font-size: 9rem;
+  }
+  &__controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.btn {
+  cursor: pointer;
+  font-size: 1.4rem;
+  &.dark-theme {
+    background-color: $secondary-color;
+    border: 1px solid set-test-color($primary-color);
+    color: set-test-color($primary-color);
+  }
+  background-color: set-test-color($primary-color);
+  border: 1px solid $primary-color;
+
+  padding: 0.6rem 2rem;
+  border-radius: 20rem;
+  &:hover {
+    background-color: invert($secondary-color, 100%);
+    color: invert(set-test-color($primary-color));
+  }
+}
+.btn-theme {
+  @extend .btn;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, -100%);
 }
