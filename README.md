@@ -93,7 +93,7 @@ more lessons on Javascript!
 
 ### Useful resources
 
-- [Example resource 1](https://www.w3schools.com/) - This helped me so learn about SetInterval() function reason. I really liked this pattern and will use it going forward.
+- [W3schools](https://www.w3schools.com/) - This helped me so learn about SetInterval() function reason. I really liked this pattern and will use it going forward.
 
 ## Author
 
