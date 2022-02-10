@@ -1,0 +1,9 @@
+@import "config";
+
+body {
+  background-color: $primary-color;
+  color: set-test-color($primary-color);
+  height: 100vh;
+  font-family: "roboto", sans-serif;
+  line-height: 1;
+}

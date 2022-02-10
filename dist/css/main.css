@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #272727;
+  color: white;
+  height: 100vh;
+  font-family: "roboto", sans-serif;
+  line-height: 1;
+}/*# sourceMappingURL=main.css.map */
