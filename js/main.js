@@ -32,6 +32,7 @@ function startTimer() {
   return vat;
 }
 function startTimercode() {
+  sec++;
   console.log('working');
   if (min > 59) {
     hr++;
@@ -46,7 +47,6 @@ function startTimercode() {
   let secTag = sec > 9 ? '' : 0;
   stopWatchScreen.textContent = `${hrTag}${hr}:${minTag}${min}:${secTag}${sec}`;
   timerIsCounting = true;
-  sec++;
 }
 function stopTimer() {
   clearInterval(vat);
