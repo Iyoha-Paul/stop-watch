@@ -33,7 +33,7 @@ function startTimer() {
 }
 function startTimercode() {
   sec++;
-  console.log('working');
+  // console.log('working');
   if (min > 59) {
     hr++;
     min = 0;

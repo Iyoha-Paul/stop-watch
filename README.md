@@ -1,5 +1,7 @@
 # stop-watch
+
 a basic stopwatch using HTML, SASS and JAVASCRIPT
+
 # Frontend Mentor - Huddle landing page with curved sections solution
 
 This is a basic stopwatch designed using HTML, SASSand Javascript.
@@ -17,8 +19,6 @@ This is a basic stopwatch designed using HTML, SASSand Javascript.
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-
 
 ## Overview
 
@@ -57,42 +57,47 @@ To see how you can add code snippets, see below:
 <h1>Some HTML code I'm proud of</h1>
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+```SASS
+{@function set-test-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return white;
+  }
+}}
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
+const proudOfThisFunc = function startTimercode() {
+  sec++;
+  // console.log('working');
+  if (min > 59) {
+    hr++;
+    min = 0;
+  }
+
+  min = sec > 59 ? min + 1 : min;
+
+  sec = sec > 59 ? 0 : sec;
+  let hrTag = hr > 9 ? "" : 0;
+  let minTag = min > 9 ? "" : 0;
+  let secTag = sec > 9 ? "" : 0;
+  stopWatchScreen.textContent = `${hrTag}${hr}:${minTag}${min}:${secTag}${sec}`;
+  timerIsCounting = true;
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+more lessons on Javascript!
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Example resource 1](https://www.w3schools.com/) - This helped me so learn about SetInterval() function reason. I really liked this pattern and will use it going forward.
 
 ## Author
 
 - Website - [IYOHA PAUL](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
